@@ -2,80 +2,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Centraliza todo o conteúdo na tela com um fundo suave */
-body {
-    background-color: #f3f4f6;
+body{
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    height: 100vh;
 }
 
-/* Transforma o bloco em um card centralizado */
-.container {
-    background-color: #ffffff;
+.container{
+    background: #fff;
+    width: 400px;
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
     text-align: center;
-    max-width: 440px;
-    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
-/* Estilização do título */
-h1 {
-    color: #1f2937;
-    font-size: 1.75rem;
-    font-weight: 700;
+h1{
+    color: #333;
     margin-bottom: 20px;
-    text-transform: capitalize;
 }
 
-/* Botão moderno com transição suave */
-button {
-    background-color: #6366f1;
-    color: #ffffff;
+button{
+    background: #007bff;
+    color: #fff;
     border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
+    padding: 12px 25px;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;
-    margin-bottom: 24px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 16px;
+    transition: .3s;
 }
 
-/* Efeito ao passar o mouse no botão */
-button:hover {
-    background-color: #4f46e5;
+button:hover{
+    background: #6ef3b5;
+    transform: scale(1.05);
 }
 
-/* Efeito visual rápido ao clicar */
-button:active {
-    transform: scale(0.98);
-}
-
-/* Container para a imagem com fundo neutro de espera */
-.image-box {
-    background-color: #f9fafb;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px; /* Mantém o espaço reservado antes da imagem carregar */
-}
-
-/* Ajustes da foto para ficar responsiva e bonita */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+img{
+    margin-top: 20px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    border: 4px solid #007bff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
 }
