@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de API - Doguinhos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Teste de API</h1>
+        
+        <button onclick="buscarImagem()">Chamar API</button>
+        
+        <div class="image-box">
+            <!-- Mantido com display: block igual ao seu original -->
+            <img id="foto" alt="Foto de cachorro" style="display: block;">
+        </div>
+    </div>
+
+    <!-- O seu JavaScript original e simplificado -->
+    <script>
+        async function buscarImagem(){
+            const resposta = await fetch("https://dog.ceo/api/breeds/image/random");
+            const dados = await resposta.json();
+            document.getElementById("foto").src = dados.message;
+        }
+    </script>
+</body>
+</html>
