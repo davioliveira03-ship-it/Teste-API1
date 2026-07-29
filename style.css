@@ -1,100 +1,64 @@
-/* Importação de fonte futurista do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Rajdhani:wght@600&display=swap');
-
-/* Reset */
+/* Configurações Globais e Reset Simples */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fundo escuro com padrão sutil */
 body {
-    min-height: 100vh;
+    background-color: #f4f7f6;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0d0e15;
-    background-image: 
-        radial-gradient(circle at 50% 20%, rgba(0, 255, 204, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 0, 127, 0.08) 0%, transparent 50%);
-    font-family: 'Rajdhani', sans-serif;
-    color: #fff;
+    min-height: 100vh;
     padding: 20px;
 }
 
-/* Título estilo letreiro neon */
+/* Título */
 h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #1a0ec9;
-    text-shadow: 
-        0 0 5px #a4be0c,
-        0 0 15px rgba(71, 95, 90, 0.6),
-        0 0 30px rgba(36, 153, 13, 0.4);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
-/* Botão futurista estilo Holograma/Cyber */
+/* Botão de Chamada */
 button {
-    font-family: 'Orbitron', sans-serif;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
     font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #5c1d97;
-    background: rgba(255, 0, 127, 0.05);
-    border: 2px solid #8a9211;
-    padding: 14px 32px;
-    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 
-        0 0 10px rgba(255, 0, 127, 0.3),
-        inset 0 0 10px rgba(255, 0, 127, 0.2);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
 }
 
-/* Efeito de brilho ao passar o mouse */
 button:hover {
-    color: #0d0e15;
-    background: #8b8387;
-    box-shadow: 
-        0 0 20px #3537aa,
-        0 0 40px #a09219;
-    transform: translateY(-2px);
+    background-color: #2980b9;
 }
 
 button:active {
-    transform: translateY(1px);
+    transform: scale(0.98);
 }
 
-/* Imagem estilo moldura holográfica */
+/* Imagem da API */
 #foto {
-    margin-top: 35px;
-    max-width: 380px;
-    max-height: 380px;
-    width: 100%;
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #ece6e6;
-    box-shadow: 
-        0 0 15px rgba(118, 121, 120, 0.4),
-        0 10px 30px rgba(134, 38, 38, 0.8);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* Esconde a borda/ícone de imagem quebrada antes do primeiro clique */
+    display: block; 
 }
 
-#foto:hover {
-    transform: scale(1.02);
-    box-shadow: 
-        0 0 25px rgba(132, 148, 145, 0.7),
-        0 15px 40px rgba(0, 0, 0, 0.9);
-}
-
-/* Oculta a imagem antes de carregar */
-#foto:not([src]) {
-    display: none;
-}
+/* Esconde a tag <img> caso não haja imagem carregada ainda */
+#
