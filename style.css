@@ -30,11 +30,11 @@ h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #00ffcc;
+    color: #1a0ec9;
     text-shadow: 
-        0 0 5px #00ffcc,
-        0 0 15px rgba(0, 255, 204, 0.6),
-        0 0 30px rgba(0, 255, 204, 0.4);
+        0 0 5px #a4be0c,
+        0 0 15px rgba(71, 95, 90, 0.6),
+        0 0 30px rgba(36, 153, 13, 0.4);
     margin-bottom: 30px;
 }
 
@@ -44,9 +44,9 @@ button {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ff007f;
+    color: #5c1d97;
     background: rgba(255, 0, 127, 0.05);
-    border: 2px solid #ff007f;
+    border: 2px solid #8a9211;
     padding: 14px 32px;
     border-radius: 4px;
     cursor: pointer;
@@ -63,8 +63,8 @@ button:hover {
     color: #0d0e15;
     background: #8b8387;
     box-shadow: 
-        0 0 20px #ff007f,
-        0 0 40px #ff007f;
+        0 0 20px #3537aa,
+        0 0 40px #a09219;
     transform: translateY(-2px);
 }
 
@@ -90,7 +90,7 @@ button:active {
 #foto:hover {
     transform: scale(1.02);
     box-shadow: 
-        0 0 25px rgba(0, 255, 204, 0.7),
+        0 0 25px rgba(132, 148, 145, 0.7),
         0 15px 40px rgba(0, 0, 0, 0.9);
 }
 
