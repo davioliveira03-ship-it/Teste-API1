@@ -1,0 +1,44 @@
+// Aguarda o DOM carregar completamente
+document.addEventListener("DOMContentLoaded", () => {
+    const botao = document.querySelector("button");
+    const imagem = document.getElementById("foto");
+
+    // Adiciona o evento de clique ao botão
+    botao.addEventListener("click", buscarImagem);
+
+    async function buscarImagem() {
+        try {
+            // Efeito visual de carregamento no botão
+            botao.innerText = "CARREGANDO...";
+            botao.disabled = true;
+            imagem.style.opacity = "0.3";
+
+            // Requisição para a API do Dog CEO
+            const resposta = await fetch("https://dog.ceo/api/breeds/image/random");
+
+            // Verifica se a resposta foi bem-sucedida
+            if (!resposta.ok) {
+                throw new Error(`Erro na requisição: ${resposta.status}`);
+            }
+
+            const dados = await resposta.json();
+
+            // Atualiza a imagem com o link retornado pela API
+            imagem.src = dados.message;
+            imagem.alt = "Foto de um cachorro carregada da API";
+
+            // Restaura o efeito da imagem ao carregar
+            imagem.onload = () => {
+                imagem.style.opacity = "1";
+            };
+
+        } catch (erro) {
+            console.error("Falha ao buscar a imagem:", erro);
+            alert("Não foi possível carregar a imagem. Tente novamente!");
+        } finally {
+            // Restaura o texto original do botão
+            botao.innerText = "CHARMAR A API";
+            botao.disabled = false;
+        }
+    }
+});

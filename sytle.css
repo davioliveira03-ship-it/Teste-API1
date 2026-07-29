@@ -61,10 +61,10 @@ button {
 /* Efeito de brilho ao passar o mouse */
 button:hover {
     color: #0d0e15;
-    background: #533c48;
+    background: #ff007f;
     box-shadow: 
-        0 0 20px #945c79,
-        0 0 40px #b86c92;
+        0 0 20px #ff007f,
+        0 0 40px #ff007f;
     transform: translateY(-2px);
 }
 
@@ -82,8 +82,8 @@ button:active {
     border-radius: 8px;
     border: 2px solid #00ffcc;
     box-shadow: 
-        0 0 15px rgba(113, 238, 213, 0.4),
-        0 10px 30px rgba(48, 109, 124, 0.8);
+        0 0 15px rgba(0, 255, 204, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
